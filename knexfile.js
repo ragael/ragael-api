@@ -5,8 +5,7 @@ module.exports = {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: './dev.sqlite3',
-      useNullAsDefault: true
+      filename: './dev.sqlite3'
     },
     migrations: {
       directory: __dirname + '/db/migrations'
@@ -21,7 +20,7 @@ module.exports = {
     client: 'sqlite3',
     connection: {
       filename: process.env.DATABASE_URL,
-      useNullAsDefault: true
+      // filename: './dev.sqlite3'
     },
     pool: {
       min: 2,
@@ -40,6 +39,7 @@ module.exports = {
     client: 'sqlite3',
     connection: {
       filename: process.env.DATABASE_URL
+      // filename: './dev.sqlite3',
     },
     pool: {
       min: 2,
